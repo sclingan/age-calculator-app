@@ -1,0 +1,39 @@
+@use 'css-reset';
+
+$primary-purple: hsl(259, 100%, 65%);
+$primary-red: hsl(0, 100%, 67%);
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-offwhite: hsl(0, 0%, 94%);
+$neutral-grey: hsl(0, 0, 86%);
+$neutral-smoke: hsl(0, 1%, 44%);
+$neutral-offblack: hsl(0, 0%, 8%);
+$font-size: 2rem;
+$ff: 'Poppins';
+$fw-400i : 400i;
+$fw-700: 700;
+$fw-800i: 800i;
+
+body {}
+
+.container {}
+
+main {}
+
+form {
+    border-bottom: 0.2rem solid $neutral-grey;
+}
+
+label {}
+
+input {}
+
+button {}
+
+img {}
+
+section {}
+
+ul {}
+
+li {}
+
