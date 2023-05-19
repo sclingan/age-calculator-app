@@ -9,31 +9,90 @@ $neutral-smoke: hsl(0, 1%, 44%);
 $neutral-offblack: hsl(0, 0%, 8%);
 $font-size: 2rem;
 $ff: 'Poppins';
-$fw-400i : 400i;
+$fw-400i : 400;
 $fw-700: 700;
-$fw-800i: 800i;
+$fw-800i: 800;
 
-body {}
+/*
+TODO:
+    fix button placement, try not using position absolute
+*/
 
-.container {}
-
-main {}
-
-form {
-    border-bottom: 0.2rem solid $neutral-grey;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $neutral-offwhite;
+    padding-inline: 1rem;
+    font-family: $ff;
+    font-size: $font-size;
+    font-weight: $fw-400i;
 }
 
-label {}
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
 
-input {}
+.container {
+    background-color: $neutral-white;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+    border-radius: 0.8rem 0.8rem 5rem 0.8rem;
+}
 
-button {}
+main {
+}
 
-img {}
+form {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border-bottom: 0.2rem solid $neutral-grey;
+    padding-bottom: 4rem;
+}
 
-section {}
+label {
+    font-size: 0.8rem;
+    display: block;
+}
 
-ul {}
+input {
+    border: 0.05rem solid $neutral-grey;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    max-width: 4rem;
+    font-size: 1rem;
+}
 
-li {}
+button {
+    position: absolute;
+    top: 4.5rem;
+    left: 7rem;
+    border: none;
+    background-color: transparent;
+}
+
+svg {
+    background-color: $primary-purple;
+    border-radius: 50%;
+    fill: $primary-purple;
+}
+
+section {
+    padding-block: 2rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+}
 
