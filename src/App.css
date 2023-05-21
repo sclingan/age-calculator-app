@@ -79,13 +79,12 @@ form {
   display: flex;
   flex-direction: row;
   position: relative;
-  border-bottom: 0.2rem solid hsl(0, 0%, 86%);
+  border-bottom: 0.1rem solid hsl(0, 0%, 86%);
   padding-bottom: 4rem;
 }
 
 label {
   font-size: 0.8rem;
-  display: block;
 }
 
 input {
