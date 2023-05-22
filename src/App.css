@@ -44,6 +44,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /*
 TODO:
     fix button placement, try not using position absolute
+    fix form spacing
 */
 body {
   display: flex;
@@ -79,6 +80,7 @@ form {
   display: flex;
   flex-direction: row;
   position: relative;
+  gap: 1rem;
   border-bottom: 0.1rem solid hsl(0, 0%, 86%);
   padding-bottom: 4rem;
 }
@@ -91,13 +93,13 @@ input {
   border: 0.05rem solid hsl(0, 0%, 86%);
   border-radius: 0.2rem;
   padding: 0.5rem;
-  max-width: 4rem;
+  max-width: 5rem;
   font-size: 1rem;
 }
 
 button {
   position: absolute;
-  top: 4.5rem;
+  top: 8.8rem;
   left: 7rem;
   border: none;
   background-color: transparent;
