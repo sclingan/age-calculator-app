@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import formValidate from './form-validate';
 
 function Form() {
     const [day, setDay] = useState('');
@@ -60,6 +61,7 @@ function Form() {
             <li><span className='answer'>{ansMonth}</span> months</li>
             <li><span className='answer'>{ansDay}</span> days</li>
            </ul>
+          <button className='test' onClick={formValidate}>click</button>
     </main>
   )
 }
