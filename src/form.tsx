@@ -12,7 +12,7 @@ function Form() {
     e.preventDefault();
     let date = new Date();
     let currentDay = date.getDate();
-    let currentMonth = date.getMonth();
+    let currentMonth = date.getMonth() + 1;
     let currentYear = date.getFullYear();
     let numDay = parseInt(day);
     let numMonth = parseInt(month);
