@@ -38,14 +38,17 @@ function Form() {
           <div>
           <label htmlFor='day'>Day</label>
           <input id='day' value={day} onChange={e => setDay(e.target.value)} placeholder='DD'></input>
+          <p className='sr-only'>Must be a valid date</p>
           </div>
           <div>
           <label htmlFor='month'>Month</label>
           <input id='month' value={month} onChange={e => setMonth(e.target.value)} placeholder='MM'></input>
+          <p className='sr-only'>Must be a valid month</p>
           </div>
           <div>
           <label htmlFor='year'>Year</label>
           <input id='year' value={year} onChange={e => setYear(e.target.value)} placeholder='YYYY'></input>
+          <p className='sr-only'>Must be in the past</p>
           </div>
           <button onClick={getAge}>
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44"><g fill="none" stroke="#fff" strokeWidth="2">
@@ -53,9 +56,9 @@ function Form() {
           </button>
         </form>
           <ul>
-            <li>{ansYear} years</li>
-            <li>{ansMonth} months</li>
-            <li>{ansDay} days</li>
+            <li><span className='answer'>{ansYear}</span> years</li>
+            <li><span className='answer'>{ansMonth}</span> months</li>
+            <li><span className='answer'>{ansDay}</span> days</li>
            </ul>
     </main>
   )

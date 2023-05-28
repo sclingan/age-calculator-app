@@ -9,14 +9,15 @@ $neutral-smoke: hsl(0, 1%, 44%);
 $neutral-offblack: hsl(0, 0%, 8%);
 $font-size: 2rem;
 $ff: 'Poppins';
-$fw-400i : 400;
+$fw-400: 400;
 $fw-700: 700;
-$fw-800i: 800;
+$fw-800: 800i;
 
 /*
 TODO:
     fix button placement, try not using position absolute
     fix form spacing
+    fix font weight
 */
 
 body {
@@ -28,7 +29,7 @@ body {
     padding-inline: 1rem;
     font-family: $ff;
     font-size: $font-size;
-    font-weight: $fw-400i;
+    font-weight: $fw-400;
 }
 
 .sr-only:not(:focus):not(:active) {
@@ -64,12 +65,23 @@ label {
     font-size: 0.8rem;
 }
 
+.label-error {
+    font-size: 0.8rem;
+    color: $primary-red;
+}
+
 input {
     border: 0.05rem solid $neutral-grey;
     border-radius: 0.2rem;
     padding: 0.5rem;
     max-width: 5rem;
     font-size: 1rem;
+}
+
+.error {
+    font-size: 0.5rem;
+    color: $primary-red;
+    padding-top: 0.5rem;
 }
 
 button {
@@ -96,5 +108,12 @@ ul {
 }
 
 li {
+    font-size: 2.2rem;
+    font-style: italic;
+    font-weight: 800;
+}
+
+span {
+    color: $primary-purple;
 }
 
