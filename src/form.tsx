@@ -39,19 +39,19 @@ function Form() {
           <div>
           <label htmlFor='day'>Day</label>
           <input id='day' value={day} onChange={e => setDay(e.target.value)} placeholder='DD'></input>
-          <p className='sr-only' id='valid'>Must be a valid date</p>
+          <p className='sr-only' id='valid-day'>Must be a valid date</p>
           <p className='sr-only' id='empty'>This field is required</p>
           </div>
           <div>
           <label htmlFor='month'>Month</label>
           <input id='month' value={month} onChange={e => setMonth(e.target.value)} placeholder='MM'></input>
-          <p className='sr-only' id='valid'>Must be a valid month</p>
+          <p className='sr-only' id='valid-month'>Must be a valid month</p>
           <p className='sr-only' id='empty'>This field is required</p>
           </div>
           <div>
           <label htmlFor='year'>Year</label>
           <input id='year' value={year} onChange={e => setYear(e.target.value)} placeholder='YYYY'></input>
-          <p className='sr-only' id='valid'>Must be in the past</p>
+          <p className='sr-only' id='valid-year'>Must be in the past</p>
           <p className='sr-only' id='empty'>This field is required</p>
           </div>
           <button onClick={getAge}>

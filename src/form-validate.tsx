@@ -9,42 +9,65 @@ export default function formValidate() {
     let day: HTMLElement | null = document.getElementById('day');
     let month: HTMLElement | null = document.getElementById('month');
     let year: HTMLElement | null = document.getElementById('year');
+    let validYear: HTMLElement | null = document.getElementById('valid-year');
+    let validMonth: HTMLElement | null = document.getElementById('valid-month');
+    let validDay : HTMLElement | null = document.getElementById('valid-day');
+    let empty: HTMLElement | null = document.getElementById('empty');
     if(day.value === '' || month.value === '' || year.value === '') {
         console.log('empty');
     }
 
     let yearValue = parseInt(year.value);
     if(yearValue > 2023){
-        console.log('error for year');
+        year?.classList.remove('input');
+        year?.classList.add('input-error');
+        validYear?.classList.remove('sr-only');
+        validYear?.classList.add('error');
     } 
     
     
 
     let monthValue = parseInt(month.value);
     if(month.value > 12) {
-        console.log('month error');
+        month?.classList.remove('input');
+        month?.classList.add('input-error');
+        validMonth?.classList.remove('sr-only');
+        validMonth?.classList.add('error');
+
     }
 
     
         switch(month.value) {
             case '4':
                 if(day.value === '31') {
-                    console.log('error');
+                    day?.classList.remove('input');
+                    day?.classList.add('input-error');
+                    validDay?.classList.remove('sr-only');
+                    validDay?.classList.add('error');
                 }
                 break;
                 case '6':
                   if(day.value === '31') {
-                      console.log('error');
+                      day?.classList.remove('input');
+                      day?.classList.add('input-error');
+                      validDay?.classList.remove('sr-only');
+                      validDay?.classList.add('error');
                   }
                   break;
                 case '9':
                     if(day.value === '31') {
-                            console.log('error');
+                            day?.classList.remove('input');
+                            day?.classList.add('input-error');
+                            validDay?.classList.remove('sr-only');
+                            validDay?.classList.add('error');
                     }
                     break;
                 case '11':
                     if(day.value === '31') {
-                                console.log('error');
+                                day?.classList.remove('input');
+                                day?.classList.add('input-error');
+                                validDay?.classList.remove('sr-only');
+                                validDay?.classList.add('error');
                     }
                     break;
                 default: console.log('worked');

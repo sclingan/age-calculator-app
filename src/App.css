@@ -45,9 +45,7 @@ p, h1, h2, h3, h4, h5, h6 {
 TODO:
     fix button placement, try not using position absolute
     fix form spacing
-    fix font weight
-    add valid paragraphs for errors
-    add empty paragraphs for empty errors
+    fix active state on tab
 */
 body {
   display: flex;
@@ -103,6 +101,15 @@ input {
   padding: 0.5rem;
   max-width: 5rem;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+input:hover {
+  border: 0.05rem solid hsl(259, 100%, 65%);
+}
+
+.input-error {
+  border: 0.05rem solid hsl(0, 100%, 67%);
 }
 
 .error {
@@ -117,12 +124,17 @@ button {
   left: 7rem;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 svg {
   background-color: hsl(259, 100%, 65%);
   border-radius: 50%;
   fill: hsl(259, 100%, 65%);
+}
+
+svg:hover {
+  background-color: black;
 }
 
 section {

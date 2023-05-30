@@ -17,9 +17,7 @@ $fw-800: 800i;
 TODO:
     fix button placement, try not using position absolute
     fix form spacing
-    fix font weight
-    add valid paragraphs for errors
-    add empty paragraphs for empty errors
+    fix active state on tab
 */
 
 body {
@@ -51,9 +49,6 @@ body {
     border-radius: 0.8rem 0.8rem 5rem 0.8rem;
 }
 
-main {
-}
-
 form {
     display: flex;
     flex-direction: row;
@@ -78,6 +73,15 @@ input {
     padding: 0.5rem;
     max-width: 5rem;
     font-size: 1rem;
+    cursor: pointer;
+}
+
+input:hover {
+    border: 0.05rem solid $primary-purple;
+}
+
+.input-error {
+    border: 0.05rem solid $primary-red;
 }
 
 .error {
@@ -92,12 +96,17 @@ button {
     left: 7rem;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 svg {
     background-color: $primary-purple;
     border-radius: 50%;
     fill: $primary-purple;
+}
+
+svg:hover {
+    background-color: black;
 }
 
 section {
