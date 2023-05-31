@@ -12,10 +12,35 @@ export default function formValidate() {
     let validYear: HTMLElement | null = document.getElementById('valid-year');
     let validMonth: HTMLElement | null = document.getElementById('valid-month');
     let validDay : HTMLElement | null = document.getElementById('valid-day');
-    let empty: HTMLElement | null = document.getElementById('empty');
-    if(day.value === '' || month.value === '' || year.value === '') {
-        console.log('empty');
-    }
+    let label = document.getElementsByTagName('label') as HTMLCollectionOf<HTMLElement>;
+    let emptyDay: HTMLElement | null = document.getElementById('empty-day');
+    let emptyMonth: HTMLElement | null = document.getElementById('empty-month');
+    let emptyYear: HTMLElement | null = document.getElementById('empty-year');
+
+         // fix this, clear error when correct input is entered
+         if(day.value === '') {
+             label[0].classList.add('error');
+             emptyDay?.classList.remove('sr-only');
+             emptyDay?.classList.add('error');
+            } 
+
+                
+                if(month.value === '') {
+                    label[1].classList.add('error');
+                    emptyMonth?.classList.remove('sr-only');
+                    emptyMonth?.classList.add('error');
+                }
+                
+        
+                    if(year.value === '') {
+                        label[2].classList.add('error');
+                        emptyYear?.classList.remove('sr-only');
+                        emptyYear?.classList.add('error');
+                    } 
+
+                
+            
+        
 
     let yearValue = parseInt(year.value);
     if(yearValue > 2023){
@@ -23,6 +48,7 @@ export default function formValidate() {
         year?.classList.add('input-error');
         validYear?.classList.remove('sr-only');
         validYear?.classList.add('error');
+        label[2].classList.add('error');
     } 
     
     
@@ -33,6 +59,7 @@ export default function formValidate() {
         month?.classList.add('input-error');
         validMonth?.classList.remove('sr-only');
         validMonth?.classList.add('error');
+        label[1].classList.add('error');
 
     }
 
@@ -44,6 +71,8 @@ export default function formValidate() {
                     day?.classList.add('input-error');
                     validDay?.classList.remove('sr-only');
                     validDay?.classList.add('error');
+                    label[0].classList.add('error');
+
                 }
                 break;
                 case '6':
@@ -52,6 +81,8 @@ export default function formValidate() {
                       day?.classList.add('input-error');
                       validDay?.classList.remove('sr-only');
                       validDay?.classList.add('error');
+                      label[0].classList.add('error');
+
                   }
                   break;
                 case '9':
@@ -60,6 +91,8 @@ export default function formValidate() {
                             day?.classList.add('input-error');
                             validDay?.classList.remove('sr-only');
                             validDay?.classList.add('error');
+                            label[0].classList.add('error');
+
                     }
                     break;
                 case '11':
@@ -68,6 +101,8 @@ export default function formValidate() {
                                 day?.classList.add('input-error');
                                 validDay?.classList.remove('sr-only');
                                 validDay?.classList.add('error');
+                                label[0].classList.add('error');
+
                     }
                     break;
                 default: console.log('worked');
