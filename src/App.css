@@ -111,6 +111,7 @@ input:hover {
 
 .input-error {
   border: 0.05rem solid hsl(0, 100%, 67%);
+  color: hsl(0, 100%, 67%);
 }
 
 .error {

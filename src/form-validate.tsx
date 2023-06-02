@@ -18,7 +18,7 @@ export default function formValidate() {
     let emptyYear: HTMLElement | null = document.getElementById('empty-year');
 
     if(day.value === '') {
-        label[0].classList.add('error');
+        label[0].classList.add('label-error');
         emptyDay?.classList.remove('sr-only');
         emptyDay?.classList.add('error');
         day?.classList.remove('input');
@@ -31,9 +31,8 @@ export default function formValidate() {
         day?.classList.add('input');
     }
 
-                
     if(month.value === '') {
-        label[1].classList.add('error');
+        label[1].classList.add('label-error');
         emptyMonth?.classList.remove('sr-only');
         emptyMonth?.classList.add('error');
         month?.classList.remove('input');
@@ -48,7 +47,7 @@ export default function formValidate() {
                 
         
     if(year.value === '') {
-        label[2].classList.add('error');
+        label[2].classList.add('label-error');
         emptyYear?.classList.remove('sr-only');
         emptyYear?.classList.add('error');
         year?.classList.remove('input');
