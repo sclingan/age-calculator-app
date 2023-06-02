@@ -46,6 +46,7 @@ TODO:
     fix button placement, try not using position absolute
     fix form spacing
     fix active state on tab
+    add desktop layout
 */
 body {
   display: flex;
@@ -154,4 +155,19 @@ li {
 
 span {
   color: hsl(259, 100%, 65%);
+}
+
+@media (min-width: 29.0625rem) {
+  .container {
+    min-width: 25rem;
+    padding-inline: 1rem;
+  }
+  .div-input {
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    top: 6.3rem;
+    left: 19.4rem;
+  }
 }/*# sourceMappingURL=App.css.map */

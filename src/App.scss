@@ -130,8 +130,21 @@ span {
     color: $primary-purple;
 }
 
-.test {
-    // font-size: 6rem;
-    // min-width: 5rem;
+@media (min-width: 29.0625rem) {
+
+    .container {
+        min-width: 25rem;
+        padding-inline: 1rem;
+    }
+
+    .div-input {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    button {
+        top: 6.3rem;
+        left: 19.4rem;
+    }
 }
 

@@ -27,6 +27,7 @@ function Form() {
     let answerYear = currentYear - numYear;
     let ansYear = answerYear.toString();
     setansYear(ansYear);
+    formValidate();
     return ansDay;
   }
 
@@ -36,19 +37,19 @@ function Form() {
     <main>
       <h1 className='sr-only'>Age Calculator App</h1>
         <form>
-          <div>
+          <div className='div-input'>
           <label htmlFor='day'>Day</label>
           <input id='day' value={day} onChange={e => setDay(e.target.value)} placeholder='DD'></input>
           <p className='sr-only' id='valid-day'>Must be a valid date</p>
           <p className='sr-only' id='empty-day'>This field is required</p>
           </div>
-          <div>
+          <div className='div-input'>
           <label htmlFor='month'>Month</label>
           <input id='month' value={month} onChange={e => setMonth(e.target.value)} placeholder='MM'></input>
           <p className='sr-only' id='valid-month'>Must be a valid month</p>
           <p className='sr-only' id='empty-month'>This field is required</p>
           </div>
-          <div>
+          <div className='div-input'>
           <label htmlFor='year'>Year</label>
           <input id='year' value={year} onChange={e => setYear(e.target.value)} placeholder='YYYY'></input>
           <p className='sr-only' id='valid-year'>Must be in the past</p>
@@ -64,8 +65,7 @@ function Form() {
             <li><span className='answer'>{ansMonth}</span> months</li>
             <li><span className='answer'>{ansDay}</span> days</li>
            </ul>
-           {/* for test only remove before deploying */}
-          <button className='test' onClick={formValidate}>click</button>
+          {/* <button className='test' onClick={formValidate}>click</button> */}
     </main>
   )
 }
