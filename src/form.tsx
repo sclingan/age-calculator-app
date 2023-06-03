@@ -9,7 +9,7 @@ function Form() {
     const [ansMonth, setansMonth] = useState('--');
     const [ansYear, setansYear] = useState('--');
 
-  function getAge(e) {
+  function getAge(e: React.FormEvent<HTMLInputElement>) {
     e.preventDefault();
     let date = new Date();
     let currentDay = date.getDate();
@@ -64,8 +64,7 @@ function Form() {
             <li><span className='answer'>{ansYear}</span> years</li>
             <li><span className='answer'>{ansMonth}</span> months</li>
             <li><span className='answer'>{ansDay}</span> days</li>
-           </ul>
-          {/* <button className='test' onClick={formValidate}>click</button> */}
+          </ul>
     </main>
   )
 }
