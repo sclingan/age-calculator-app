@@ -7,8 +7,11 @@ export default function formValidate() {
     // test for valid months, nothing over 12
     // test for vaild years, nothing over current year
     let day: HTMLElement | null = document.getElementById('day');
+    let dayValue = (document.getElementById('day') as HTMLInputElement).value;
     let month: HTMLElement | null = document.getElementById('month');
+    let monthValue = (document.getElementById('month') as HTMLInputElement).value;
     let year: HTMLElement | null = document.getElementById('year');
+    let yearValue = (document.getElementById('year') as HTMLInputElement).value;
     let validYear: HTMLElement | null = document.getElementById('valid-year');
     let validMonth: HTMLElement | null = document.getElementById('valid-month');
     let validDay : HTMLElement | null = document.getElementById('valid-day');
@@ -16,29 +19,29 @@ export default function formValidate() {
     let emptyDay: HTMLElement | null = document.getElementById('empty-day');
     let emptyMonth: HTMLElement | null = document.getElementById('empty-month');
     let emptyYear: HTMLElement | null = document.getElementById('empty-year');
-
-    if(day.value === '') {
+    
+    if(dayValue === '') {
         label[0].classList.add('label-error');
         emptyDay?.classList.remove('sr-only');
         emptyDay?.classList.add('error');
         day?.classList.remove('input');
         day?.classList.add('input-error');
     } else {
-        label[0].classList.remove('error');
+        label[0].classList.remove('label-error');
         emptyDay?.classList.remove('error')
         emptyDay?.classList.add('sr-only');
         day?.classList.remove('input-error');
         day?.classList.add('input');
     }
 
-    if(month.value === '') {
+    if(monthValue === '') {
         label[1].classList.add('label-error');
         emptyMonth?.classList.remove('sr-only');
         emptyMonth?.classList.add('error');
         month?.classList.remove('input');
         month?.classList.add('input-error');
     } else {
-        label[1].classList.remove('error');
+        label[1].classList.remove('label-error');
         emptyMonth?.classList.remove('error')
         emptyMonth?.classList.add('sr-only');
         month?.classList.remove('input-error');
@@ -46,7 +49,7 @@ export default function formValidate() {
     }
                 
         
-    if(year.value === '') {
+    if(yearValue === '') {
         label[2].classList.add('label-error');
         emptyYear?.classList.remove('sr-only');
         emptyYear?.classList.add('error');
@@ -61,8 +64,8 @@ export default function formValidate() {
     }
 
                 
-    let yearValue = parseInt(year.value);
-    if(yearValue > 2023){
+    let yearsValue = parseInt(yearValue);
+    if(yearsValue > 2023){
         year?.classList.remove('input');
         year?.classList.add('input-error');
         validYear?.classList.remove('sr-only');
@@ -79,8 +82,8 @@ export default function formValidate() {
     
     
 
-    let monthValue = parseInt(month.value);
-    if(monthValue > 12) {
+    let monthsValue = parseInt(monthValue);
+    if(monthsValue > 12) {
         month?.classList.remove('input');
         month?.classList.add('input-error');
         validMonth?.classList.remove('sr-only');
@@ -97,9 +100,9 @@ export default function formValidate() {
     }
 
     
-    switch(month.value) {
+    switch(monthValue) {
         case '4':
-            if(day.value === '31') {
+            if(dayValue === '31') {
                 day?.classList.remove('input');
                 day?.classList.add('input-error');
                 validDay?.classList.remove('sr-only');
@@ -115,7 +118,7 @@ export default function formValidate() {
             break;
 
             case '6':
-                if(day.value === '31') {
+                if(dayValue === '31') {
                     day?.classList.remove('input');
                     day?.classList.add('input-error');
                     validDay?.classList.remove('sr-only');
@@ -131,7 +134,7 @@ export default function formValidate() {
                 break;
 
                 case '9':
-                    if(day.value === '31') {
+                    if(dayValue === '31') {
                             day?.classList.remove('input');
                             day?.classList.add('input-error');
                             validDay?.classList.remove('sr-only');
@@ -147,7 +150,7 @@ export default function formValidate() {
                     break;
 
                 case '11':
-                    if(day.value === '31') {
+                    if(dayValue === '31') {
                                 day?.classList.remove('input');
                                 day?.classList.add('input-error');
                                 validDay?.classList.remove('sr-only');
