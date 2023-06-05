@@ -1,11 +1,5 @@
 
 export default function formValidate() {
-    // use this for form submit 
-    // test for empty input 
-    // test for valid days of month
-    // 2 febuary 28 days,4 april 30days, 6 june 30 days, 9 september 30days, 11 november 30days
-    // test for valid months, nothing over 12
-    // test for vaild years, nothing over current year
     let day: HTMLElement | null = document.getElementById('day');
     let dayValue = (document.getElementById('day') as HTMLInputElement).value;
     let month: HTMLElement | null = document.getElementById('month');
@@ -20,6 +14,13 @@ export default function formValidate() {
     let emptyMonth: HTMLElement | null = document.getElementById('empty-month');
     let emptyYear: HTMLElement | null = document.getElementById('empty-year');
     
+
+    /* 
+    TODO:
+         
+    */
+
+    // Test for empty inputs
     if(dayValue === '') {
         label[0].classList.add('label-error');
         emptyDay?.classList.remove('sr-only');
@@ -56,14 +57,14 @@ export default function formValidate() {
         year?.classList.remove('input');
         year?.classList.add('input-error');
     } else {
-        label[2].classList.remove('error');
+        label[2].classList.remove('label-error');
         emptyYear?.classList.remove('error')
         emptyYear?.classList.add('sr-only');
         year?.classList.remove('input-error');
         year?.classList.add('input');
     }
 
-                
+    // Test for correct year, nothing in the future           
     let yearsValue = parseInt(yearValue);
     if(yearsValue > 2023){
         year?.classList.remove('input');
@@ -72,7 +73,7 @@ export default function formValidate() {
         validYear?.classList.add('error');
         label[2].classList.add('error');
     } else {
-        label[1].classList.remove('error');
+        label[2].classList.remove('error');
         validYear?.classList.remove('error');
         validYear?.classList.add('sr-only');
         year?.classList.remove('input-error');
@@ -81,7 +82,7 @@ export default function formValidate() {
     }
     
     
-
+    // Test for correct input on month
     let monthsValue = parseInt(monthValue);
     if(monthsValue > 12) {
         month?.classList.remove('input');
@@ -99,7 +100,7 @@ export default function formValidate() {
 
     }
 
-    
+    // Test for correct number of days of the month
     switch(monthValue) {
         case '4':
             if(dayValue === '31') {

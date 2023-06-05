@@ -8,7 +8,14 @@ function Form() {
     const [ansDay, setansDay] = useState('--');
     const [ansMonth, setansMonth] = useState('--');
     const [ansYear, setansYear] = useState('--');
+  
 
+
+  /*  
+  TODO:
+       fix day/month calculations, no negative numbers on return
+       test results on days and months
+  */
   function getAge(e: React.FormEvent<HTMLInputElement>) {
     e.preventDefault();
     let date = new Date();
@@ -18,7 +25,12 @@ function Form() {
     let numDay = parseInt(day);
     let numMonth = parseInt(month);
     let numYear = parseInt(year);
-    let answerDay = currentDay - numDay;
+    let answerDay = 0;
+    if(numDay >= currentDay){
+      answerDay = numDay - currentDay;
+    } else {
+      answerDay = currentDay - numDay;
+    }
     let ansDay = answerDay.toString();
     setansDay(ansDay);
     let answerMonth = currentMonth - numMonth;
