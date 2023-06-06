@@ -13,6 +13,7 @@ export default function formValidate() {
     let emptyDay: HTMLElement | null = document.getElementById('empty-day');
     let emptyMonth: HTMLElement | null = document.getElementById('empty-month');
     let emptyYear: HTMLElement | null = document.getElementById('empty-year');
+    let button: HTMLElement | null = document.getElementById('button');
     
 
     /* 
@@ -27,12 +28,16 @@ export default function formValidate() {
         emptyDay?.classList.add('error');
         day?.classList.remove('input');
         day?.classList.add('input-error');
+        button?.classList.remove('button');
+        button?.classList.add('button-error');
     } else {
         label[0].classList.remove('label-error');
         emptyDay?.classList.remove('error')
         emptyDay?.classList.add('sr-only');
         day?.classList.remove('input-error');
         day?.classList.add('input');
+        button?.classList.remove('button-error');
+        button?.classList.add('button');
     }
 
     if(monthValue === '') {
@@ -41,12 +46,16 @@ export default function formValidate() {
         emptyMonth?.classList.add('error');
         month?.classList.remove('input');
         month?.classList.add('input-error');
+        button?.classList.remove('button');
+        button?.classList.add('button-error');
     } else {
         label[1].classList.remove('label-error');
         emptyMonth?.classList.remove('error')
         emptyMonth?.classList.add('sr-only');
         month?.classList.remove('input-error');
         month?.classList.add('input');
+        button?.classList.remove('button-error');
+        button?.classList.add('button');
     }
                 
         
@@ -56,12 +65,16 @@ export default function formValidate() {
         emptyYear?.classList.add('error');
         year?.classList.remove('input');
         year?.classList.add('input-error');
+        button?.classList.remove('button');
+        button?.classList.add('button-error');
     } else {
         label[2].classList.remove('label-error');
         emptyYear?.classList.remove('error')
         emptyYear?.classList.add('sr-only');
         year?.classList.remove('input-error');
         year?.classList.add('input');
+        button?.classList.remove('button-error');
+        button?.classList.add('button');
     }
 
     // Test for correct year, nothing in the future           
@@ -72,12 +85,16 @@ export default function formValidate() {
         validYear?.classList.remove('sr-only');
         validYear?.classList.add('error');
         label[2].classList.add('error');
+        button?.classList.remove('button');
+        button?.classList.add('button-error');
     } else {
         label[2].classList.remove('error');
         validYear?.classList.remove('error');
         validYear?.classList.add('sr-only');
         year?.classList.remove('input-error');
         year?.classList.add('input');
+        button?.classList.remove('button-error');
+        button?.classList.add('button');
 
     }
     
@@ -90,6 +107,8 @@ export default function formValidate() {
         validMonth?.classList.remove('sr-only');
         validMonth?.classList.add('error');
         label[1].classList.add('error');
+        button?.classList.remove('button');
+        button?.classList.add('button-error');
 
     } else {
         label[1].classList.remove('error');
@@ -97,6 +116,8 @@ export default function formValidate() {
         validMonth?.classList.add('sr-only');
         month?.classList.remove('input-error');
         month?.classList.add('input');
+        button?.classList.remove('button-error');
+        button?.classList.add('button');
 
     }
 
@@ -109,12 +130,16 @@ export default function formValidate() {
                 validDay?.classList.remove('sr-only');
                 validDay?.classList.add('error');
                 label[0].classList.add('error');
+                button?.classList.remove('button');
+                button?.classList.add('button-error');
             } else {
                  day?.classList.remove('input-error');
                 day?.classList.add('input');
                 validDay?.classList.remove('error');
                 validDay?.classList.add('sr-only');
                 label[0].classList.remove('error');
+                button?.classList.remove('button-error');
+                button?.classList.add('button');
             }
             break;
 
@@ -125,12 +150,16 @@ export default function formValidate() {
                     validDay?.classList.remove('sr-only');
                     validDay?.classList.add('error');
                     label[0].classList.add('error');
+                    button?.classList.remove('button');
+                    button?.classList.add('button-error');
                 } else {
                 day?.classList.remove('input-error');
                 day?.classList.add('input');
                 validDay?.classList.remove('error');
                 validDay?.classList.add('sr-only');
                 label[0].classList.remove('error');
+                button?.classList.remove('button-error');
+                button?.classList.add('button');
                 }
                 break;
 
@@ -141,12 +170,16 @@ export default function formValidate() {
                             validDay?.classList.remove('sr-only');
                             validDay?.classList.add('error');
                             label[0].classList.add('error');
+                            button?.classList.remove('button');
+                            button?.classList.add('button-error');
                     } else {
                         day?.classList.remove('input-error');
                         day?.classList.add('input');
                         validDay?.classList.remove('error');
                         validDay?.classList.add('sr-only');
                         label[0].classList.remove('error');
+                        button?.classList.remove('button-error');
+                        button?.classList.add('button');
                     }
                     break;
 
@@ -157,12 +190,16 @@ export default function formValidate() {
                                 validDay?.classList.remove('sr-only');
                                 validDay?.classList.add('error');
                                 label[0].classList.add('error');
+                                button?.classList.remove('button');
+                                button?.classList.add('button-error');
                     } else {
                         day?.classList.remove('input-error');
                         day?.classList.add('input');
                         validDay?.classList.remove('error');
                         validDay?.classList.add('sr-only');
                         label[0].classList.remove('error');
+                        button?.classList.remove('button-error');
+                        button?.classList.add('button');
                     }
                     break;
 

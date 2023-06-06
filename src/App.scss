@@ -92,9 +92,18 @@ input:hover {
     padding-top: 0.5rem;
 }
 
-button {
+.button {
     position: absolute;
     top: 8.8rem;
+    left: 7rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button-error {
+    position: absolute;
+    top: 10.7rem;
     left: 7rem;
     border: none;
     background-color: transparent;

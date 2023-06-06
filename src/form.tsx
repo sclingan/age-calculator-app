@@ -16,8 +16,8 @@ function Form() {
        fix day/month calculations, no negative numbers on return
        test results on days and months
   */
-  function getAge(e: React.FormEvent<HTMLInputElement>) {
-    e.preventDefault();
+  function getAge(e: any) {
+    e.preventDefault();  //fix type on this
     let date = new Date();
     let currentDay = date.getDate();
     let currentMonth = date.getMonth() + 1;
@@ -26,14 +26,19 @@ function Form() {
     let numMonth = parseInt(month);
     let numYear = parseInt(year);
     let answerDay = 0;
-    if(numDay >= currentDay){
+    if(numDay >= currentDay) {
       answerDay = numDay - currentDay;
     } else {
       answerDay = currentDay - numDay;
     }
     let ansDay = answerDay.toString();
     setansDay(ansDay);
-    let answerMonth = currentMonth - numMonth;
+    let answerMonth = 0;
+    if(numMonth >= currentMonth) {
+      answerMonth = numMonth - currentMonth;
+    } else {
+      answerMonth = currentMonth - numMonth;
+    }
     let ansMonth = answerMonth.toString();
     setansMonth(ansMonth);
     let answerYear = currentYear - numYear;
@@ -67,7 +72,7 @@ function Form() {
           <p className='sr-only' id='valid-year'>Must be in the past</p>
           <p className='sr-only' id='empty-year'>This field is required</p>
           </div>
-          <button onClick={getAge}>
+          <button onClick={getAge} id='button' className='button'>
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44"><g fill="none" stroke="#fff" strokeWidth="2">
                 <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
           </button>
