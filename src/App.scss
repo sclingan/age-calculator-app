@@ -110,14 +110,6 @@ input:hover {
     cursor: pointer;
 }
 
-.button-error-valid {
-    position: absolute;
-    top: 10rem;
-    left: 7rem;
-    border: none;
-    background-color: transparent;
-}
-
 svg {
     background-color: $primary-purple;
     border-radius: 50%;
@@ -159,8 +151,15 @@ span {
         flex-direction: column;
     }
     
-    button {
+    .button {
+        position: absolute;
         top: 6.3rem;
+        left: 19.4rem;
+    }
+
+    .button-error {
+        position: absolute;
+        top: 7.6rem;
         left: 19.4rem;
     }
 }
