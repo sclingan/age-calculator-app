@@ -110,6 +110,14 @@ input:hover {
     cursor: pointer;
 }
 
+.button-error-valid {
+    position: absolute;
+    top: 10rem;
+    left: 7rem;
+    border: none;
+    background-color: transparent;
+}
+
 svg {
     background-color: $primary-purple;
     border-radius: 50%;
