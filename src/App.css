@@ -43,10 +43,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /*
 TODO:
-    fix button placement, try not using position absolute
     fix form spacing
     fix active state on tab
-    fix button placement on desktop, button moves on error text
 */
 body {
   display: flex;
@@ -122,19 +120,10 @@ input:hover {
 
 .button {
   position: absolute;
-  top: 8.8rem;
-  left: 7rem;
   border: none;
   background-color: transparent;
-  cursor: pointer;
-}
-
-.button-error {
-  position: absolute;
-  top: 10.7rem;
-  left: 7rem;
-  border: none;
-  background-color: transparent;
+  margin-left: 8rem;
+  margin-top: -1.6rem;
   cursor: pointer;
 }
 
@@ -178,12 +167,6 @@ span {
   }
   .button {
     position: absolute;
-    top: 6.3rem;
-    left: 19.4rem;
-  }
-  .button-error {
-    position: absolute;
-    top: 7.6rem;
-    left: 19.4rem;
+    margin-left: 20rem;
   }
 }/*# sourceMappingURL=App.css.map */
