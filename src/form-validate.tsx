@@ -17,7 +17,7 @@ export default function formValidate() {
 
     /* 
     TODO:
-         
+       minimize!!  
     */
 
     // Test for empty inputs
@@ -102,6 +102,22 @@ export default function formValidate() {
 
     // Test for correct number of days of the month
     switch(monthValue) {
+        case '2':
+            if(dayValue > '28') {
+                day?.classList.remove('input');
+                day?.classList.add('input-error');
+                validDay?.classList.remove('sr-only');
+                validDay?.classList.add('error');
+                label[0].classList.add('error');
+            } else {
+                 day?.classList.remove('input-error');
+                day?.classList.add('input');
+                validDay?.classList.remove('error');
+                validDay?.classList.add('sr-only');
+                label[0].classList.remove('error');
+            }
+            break;
+
         case '4':
             if(dayValue === '31') {
                 day?.classList.remove('input');

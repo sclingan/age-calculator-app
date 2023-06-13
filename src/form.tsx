@@ -27,7 +27,9 @@ function Form() {
     let numYear = parseInt(year);
     let answerDay = 0;
     if(numDay >= currentDay) {
-      answerDay = numDay - currentDay;
+      //subtract this from 31??
+      // answerDay = numDay - currentDay;
+      answerDay = 30 - (numDay - currentDay);
     } else {
       answerDay = currentDay - numDay;
     }
