@@ -52,6 +52,12 @@ form {
     padding-bottom: 4rem;
 }
 
+fieldset {
+    display: flex;
+    gap: 1rem;
+    border: none;
+}
+
 label {
     font-size: 0.8rem;
 }

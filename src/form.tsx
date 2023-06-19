@@ -56,27 +56,30 @@ function Form() {
     <main>
       <h1 className='sr-only'>Age Calculator App</h1>
         <form>
+          <fieldset>
+            <legend className='sr-only'>Input Birthday</legend>
           <div className='div-input'>
           <label htmlFor='day'>Day</label>
-          <input id='day' value={day} onChange={e => setDay(e.target.value)} placeholder='DD'></input>
+          <input id='day' aria-label='Birthday' value={day} onChange={e => setDay(e.target.value)} placeholder='DD'></input>
           <p className='sr-only' id='valid-day'>Must be a valid date</p>
           <p className='sr-only' id='empty-day'>This field is required</p>
           </div>
           <div className='div-input'>
           <label htmlFor='month'>Month</label>
-          <input id='month' value={month} onChange={e => setMonth(e.target.value)} placeholder='MM'></input>
+          <input id='month'  aria-label='Birthmonth' value={month} onChange={e => setMonth(e.target.value)} placeholder='MM'></input>
           <p className='sr-only' id='valid-month'>Must be a valid month</p>
           <p className='sr-only' id='empty-month'>This field is required</p>
           </div>
           <div className='div-input'>
           <label htmlFor='year'>Year</label>
-          <input id='year' value={year} onChange={e => setYear(e.target.value)} placeholder='YYYY'></input>
+          <input id='year' aria-label='Birthyear' value={year} onChange={e => setYear(e.target.value)} placeholder='YYYY'></input>
           <p className='sr-only' id='valid-year'>Must be in the past</p>
           <p className='sr-only' id='empty-year'>This field is required</p>
           </div>
+          </fieldset>
         </form>
           <div>
-          <button onClick={getAge} id='button' className='button'>
+          <button onClick={getAge} id='button' className='button' aria-label='Get current age'>
             <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44"><g fill="none" stroke="#fff" strokeWidth="2">
                 <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
           </button>
