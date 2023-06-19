@@ -36,7 +36,9 @@ function Form() {
     let ansDay = answerDay.toString();
     setansDay(ansDay);
     let answerMonth = 0;
-    if(numMonth >= currentMonth) {
+    if(numMonth > currentMonth) {
+      // check for 0 on = month
+      // if month is > subtract from 12? to get months
       answerMonth = numMonth - currentMonth;
     } else {
       answerMonth = currentMonth - numMonth;
