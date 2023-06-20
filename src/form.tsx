@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { MouseEventHandler, useState } from 'react'
 import formValidate from './form-validate';
 
 function Form() {
@@ -11,13 +11,8 @@ function Form() {
   
 
 
-  /*  
-  TODO:
-       fix day/month calculations, no negative numbers on return
-       test results on days and months
-  */
   function getAge(e: any) {
-    e.preventDefault();  //fix type on this
+    e.preventDefault(); 
     let date = new Date();
     let currentDay = date.getDate();
     let currentMonth = date.getMonth() + 1;
@@ -26,9 +21,7 @@ function Form() {
     let numMonth = parseInt(month);
     let numYear = parseInt(year);
     let answerDay = 0;
-    if(numDay >= currentDay) {
-      //subtract this from 31??
-      // answerDay = numDay - currentDay;
+    if(numDay > currentDay) {
       answerDay = 30 - (numDay - currentDay);
     } else {
       answerDay = currentDay - numDay;
@@ -37,9 +30,7 @@ function Form() {
     setansDay(ansDay);
     let answerMonth = 0;
     if(numMonth > currentMonth) {
-      // check for 0 on = month
-      // if month is > subtract from 12? to get months
-      answerMonth = numMonth - currentMonth;
+      answerMonth = 12 - (numMonth - currentMonth);
     } else {
       answerMonth = currentMonth - numMonth;
     }

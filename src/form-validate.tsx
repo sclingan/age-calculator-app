@@ -14,12 +14,6 @@ export default function formValidate() {
     let emptyMonth: HTMLElement | null = document.getElementById('empty-month');
     let emptyYear: HTMLElement | null = document.getElementById('empty-year');
     
-
-    /* 
-    TODO:
-       minimize!!  
-    */
-
     // Test for empty inputs
     if(dayValue === '') {
         label[0].classList.add('label-error');
@@ -134,55 +128,55 @@ export default function formValidate() {
             }
             break;
 
-            case '6':
-                if(dayValue === '31') {
-                    day?.classList.remove('input');
-                    day?.classList.add('input-error');
-                    validDay?.classList.remove('sr-only');
-                    validDay?.classList.add('error');
-                    label[0].classList.add('error');
-                } else {
+        case '6':
+            if(dayValue === '31') {
+                day?.classList.remove('input');
+                day?.classList.add('input-error');
+                validDay?.classList.remove('sr-only');
+                validDay?.classList.add('error');
+                label[0].classList.add('error');
+            } else {
                 day?.classList.remove('input-error');
                 day?.classList.add('input');
                 validDay?.classList.remove('error');
                 validDay?.classList.add('sr-only');
                 label[0].classList.remove('error');
-                }
-                break;
+            }
+            break;
 
-                case '9':
-                    if(dayValue === '31') {
-                            day?.classList.remove('input');
-                            day?.classList.add('input-error');
-                            validDay?.classList.remove('sr-only');
-                            validDay?.classList.add('error');
-                            label[0].classList.add('error');
-                    } else {
-                        day?.classList.remove('input-error');
-                        day?.classList.add('input');
-                        validDay?.classList.remove('error');
-                        validDay?.classList.add('sr-only');
-                        label[0].classList.remove('error');
-                    }
-                    break;
+        case '9':
+            if(dayValue === '31') {
+                day?.classList.remove('input');
+                day?.classList.add('input-error');
+                validDay?.classList.remove('sr-only');
+                validDay?.classList.add('error');
+                label[0].classList.add('error');
+            } else {
+                day?.classList.remove('input-error');
+                day?.classList.add('input');
+                validDay?.classList.remove('error');
+                validDay?.classList.add('sr-only');
+                label[0].classList.remove('error');
+            }
+            break;
 
-                case '11':
-                    if(dayValue === '31') {
-                                day?.classList.remove('input');
-                                day?.classList.add('input-error');
-                                validDay?.classList.remove('sr-only');
-                                validDay?.classList.add('error');
-                                label[0].classList.add('error');
-                    } else {
-                        day?.classList.remove('input-error');
-                        day?.classList.add('input');
-                        validDay?.classList.remove('error');
-                        validDay?.classList.add('sr-only');
-                        label[0].classList.remove('error');
-                    }
-                    break;
+        case '11':
+            if(dayValue === '31') {
+                day?.classList.remove('input');
+                day?.classList.add('input-error');
+                validDay?.classList.remove('sr-only');
+                validDay?.classList.add('error');
+                label[0].classList.add('error');
+            } else {
+                day?.classList.remove('input-error');
+                day?.classList.add('input');
+                validDay?.classList.remove('error');
+                validDay?.classList.add('sr-only');
+                label[0].classList.remove('error');
+            }
+            break;
 
-                default: console.log('worked');
+            default: console.log('worked');
         }
 
 }
