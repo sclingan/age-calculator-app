@@ -174,4 +174,9 @@ span {
     position: absolute;
     margin-left: 20rem;
   }
+}
+@media (max-width: 22.5rem) {
+  body {
+    padding-inline: 2rem;
+  }
 }/*# sourceMappingURL=App.css.map */
