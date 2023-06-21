@@ -157,6 +157,10 @@ span {
 @media (max-width: 22.5rem) {
 
     body {
-        padding-inline: 2rem;
+        padding-inline: 0.2rem;
+    }
+
+    .container {
+        padding-inline: 1rem;
     }
 }
