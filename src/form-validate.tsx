@@ -17,28 +17,28 @@ export default function formValidate() {
     // Test for empty inputs
     if(dayValue === '') {
         label[0].classList.add('label-error');
-        emptyDay?.classList.remove('sr-only');
+        emptyDay?.classList.remove('sr-hidden');
         emptyDay?.classList.add('error');
         day?.classList.remove('input');
         day?.classList.add('input-error');
     } else {
         label[0].classList.remove('label-error');
         emptyDay?.classList.remove('error')
-        emptyDay?.classList.add('sr-only');
+        emptyDay?.classList.add('sr-hidden');
         day?.classList.remove('input-error');
         day?.classList.add('input');
     }
 
     if(monthValue === '') {
         label[1].classList.add('label-error');
-        emptyMonth?.classList.remove('sr-only');
+        emptyMonth?.classList.remove('sr-hidden');
         emptyMonth?.classList.add('error');
         month?.classList.remove('input');
         month?.classList.add('input-error');
     } else {
         label[1].classList.remove('label-error');
         emptyMonth?.classList.remove('error')
-        emptyMonth?.classList.add('sr-only');
+        emptyMonth?.classList.add('sr-hidden');
         month?.classList.remove('input-error');
         month?.classList.add('input');
     }
@@ -46,14 +46,14 @@ export default function formValidate() {
         
     if(yearValue === '') {
         label[2].classList.add('label-error');
-        emptyYear?.classList.remove('sr-only');
+        emptyYear?.classList.remove('sr-hidden');
         emptyYear?.classList.add('error');
         year?.classList.remove('input');
         year?.classList.add('input-error');
     } else {
         label[2].classList.remove('label-error');
         emptyYear?.classList.remove('error')
-        emptyYear?.classList.add('sr-only');
+        emptyYear?.classList.add('sr-hidden');
         year?.classList.remove('input-error');
         year?.classList.add('input');
     }
@@ -63,13 +63,13 @@ export default function formValidate() {
     if(yearsValue > 2023){
         year?.classList.remove('input');
         year?.classList.add('input-error');
-        validYear?.classList.remove('sr-only');
+        validYear?.classList.remove('srhidden');
         validYear?.classList.add('error');
         label[2].classList.add('error');
     } else {
         label[2].classList.remove('error');
         validYear?.classList.remove('error');
-        validYear?.classList.add('sr-only');
+        validYear?.classList.add('sr-hidden');
         year?.classList.remove('input-error');
         year?.classList.add('input');
 
@@ -81,14 +81,14 @@ export default function formValidate() {
     if(monthsValue > 12) {
         month?.classList.remove('input');
         month?.classList.add('input-error');
-        validMonth?.classList.remove('sr-only');
+        validMonth?.classList.remove('sr-hidden');
         validMonth?.classList.add('error');
         label[1].classList.add('error');
 
     } else {
         label[1].classList.remove('error');
         validMonth?.classList.remove('error');
-        validMonth?.classList.add('sr-only');
+        validMonth?.classList.add('sr-hidden');
         month?.classList.remove('input-error');
         month?.classList.add('input');
 
@@ -100,14 +100,14 @@ export default function formValidate() {
             if(dayValue > '28') {
                 day?.classList.remove('input');
                 day?.classList.add('input-error');
-                validDay?.classList.remove('sr-only');
+                validDay?.classList.remove('sr-hidden');
                 validDay?.classList.add('error');
                 label[0].classList.add('error');
             } else {
                  day?.classList.remove('input-error');
                 day?.classList.add('input');
                 validDay?.classList.remove('error');
-                validDay?.classList.add('sr-only');
+                validDay?.classList.add('sr-hidden');
                 label[0].classList.remove('error');
             }
             break;
@@ -116,14 +116,14 @@ export default function formValidate() {
             if(dayValue === '31') {
                 day?.classList.remove('input');
                 day?.classList.add('input-error');
-                validDay?.classList.remove('sr-only');
+                validDay?.classList.remove('sr-hidden');
                 validDay?.classList.add('error');
                 label[0].classList.add('error');
             } else {
                  day?.classList.remove('input-error');
                 day?.classList.add('input');
                 validDay?.classList.remove('error');
-                validDay?.classList.add('sr-only');
+                validDay?.classList.add('sr-hidden');
                 label[0].classList.remove('error');
             }
             break;
@@ -132,14 +132,14 @@ export default function formValidate() {
             if(dayValue === '31') {
                 day?.classList.remove('input');
                 day?.classList.add('input-error');
-                validDay?.classList.remove('sr-only');
+                validDay?.classList.remove('sr-hidden');
                 validDay?.classList.add('error');
                 label[0].classList.add('error');
             } else {
                 day?.classList.remove('input-error');
                 day?.classList.add('input');
                 validDay?.classList.remove('error');
-                validDay?.classList.add('sr-only');
+                validDay?.classList.add('sr-hidden');
                 label[0].classList.remove('error');
             }
             break;
@@ -148,14 +148,14 @@ export default function formValidate() {
             if(dayValue === '31') {
                 day?.classList.remove('input');
                 day?.classList.add('input-error');
-                validDay?.classList.remove('sr-only');
+                validDay?.classList.remove('sr-hidden');
                 validDay?.classList.add('error');
                 label[0].classList.add('error');
             } else {
                 day?.classList.remove('input-error');
                 day?.classList.add('input');
                 validDay?.classList.remove('error');
-                validDay?.classList.add('sr-only');
+                validDay?.classList.add('sr-hidden');
                 label[0].classList.remove('error');
             }
             break;
@@ -164,14 +164,14 @@ export default function formValidate() {
             if(dayValue === '31') {
                 day?.classList.remove('input');
                 day?.classList.add('input-error');
-                validDay?.classList.remove('sr-only');
+                validDay?.classList.remove('srhidden');
                 validDay?.classList.add('error');
                 label[0].classList.add('error');
             } else {
                 day?.classList.remove('input-error');
                 day?.classList.add('input');
                 validDay?.classList.remove('error');
-                validDay?.classList.add('sr-only');
+                validDay?.classList.add('sr-hidden');
                 label[0].classList.remove('error');
             }
             break;

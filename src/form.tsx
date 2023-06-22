@@ -54,20 +54,20 @@ function Form() {
           <div className='div-input'>
           <label htmlFor='day'>Day</label>
           <input id='day' aria-label='Birthday' value={day} onChange={e => setDay(e.target.value)} placeholder='DD'></input>
-          <p className='sr-only' id='valid-day'>Must be a valid date</p>
-          <p className='sr-only' id='empty-day'>This field is required</p>
+          <p className='sr-hidden' id='valid-day'>Must be a valid date</p>
+          <p className='sr-hidden' id='empty-day'>This field is required</p>
           </div>
           <div className='div-input'>
           <label htmlFor='month'>Month</label>
           <input id='month'  aria-label='Birthmonth' value={month} onChange={e => setMonth(e.target.value)} placeholder='MM'></input>
-          <p className='sr-only' id='valid-month'>Must be a valid month</p>
-          <p className='sr-only' id='empty-month'>This field is required</p>
+          <p className='sr-hidden' id='valid-month'>Must be a valid month</p>
+          <p className='sr-hidden' id='empty-month'>This field is required</p>
           </div>
           <div className='div-input'>
           <label htmlFor='year'>Year</label>
           <input id='year' aria-label='Birthyear' value={year} onChange={e => setYear(e.target.value)} placeholder='YYYY'></input>
-          <p className='sr-only' id='valid-year'>Must be in the past</p>
-          <p className='sr-only' id='empty-year'>This field is required</p>
+          <p className='sr-hidden' id='valid-year'>Must be in the past</p>
+          <p className='sr-hidden' id='empty-year'>This field is required</p>
           </div>
           </fieldset>
         </form>
