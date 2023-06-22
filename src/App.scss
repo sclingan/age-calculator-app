@@ -162,6 +162,12 @@ span {
 
 
 @media (max-width: 22.5rem) {
+    
+    body {
+        display: flex;
+        justify-content: left;
+        align-items: start;
+    }
 
     fieldset {
         display: flex;
