@@ -64,6 +64,15 @@ body {
   width: 1px;
 }
 
+.sr-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  width: 1px;
+}
+
 .container {
   background-color: hsl(0, 0%, 100%);
   padding-inline: 2rem;
@@ -176,10 +185,8 @@ span {
   }
 }
 @media (max-width: 22.5rem) {
-  body {
-    padding-inline: 0.2rem;
-  }
-  .container {
-    padding-inline: 1rem;
+  fieldset {
+    display: flex;
+    gap: 0.2rem;
   }
 }/*# sourceMappingURL=App.css.map */
