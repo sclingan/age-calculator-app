@@ -185,14 +185,9 @@ span {
   }
 }
 @media (max-width: 22.5rem) {
-  body {
-    display: flex;
-    justify-content: left;
-    align-items: start;
-  }
   fieldset {
-    display: flex;
-    flex-direction: row;
-    gap: 0.2rem;
+    display: inline;
+    margin-inline: 0;
+    padding-inline: 0;
   }
 }/*# sourceMappingURL=App.css.map */
