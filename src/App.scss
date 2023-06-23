@@ -168,4 +168,9 @@ span {
         margin-inline: 0;
         padding-inline: 0;
     }
+
+    label {
+        display: flex;
+        flex-direction: row;
+    }
 }
