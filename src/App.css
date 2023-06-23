@@ -185,6 +185,9 @@ span {
   }
 }
 @media (max-width: 22.5rem) {
+  body {
+    padding-top: 5rem;
+  }
   fieldset {
     display: flex;
     margin-inline: 0;
